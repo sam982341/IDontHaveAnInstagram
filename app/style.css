@@ -1,0 +1,245 @@
+/* http: //flexboxgrid.com/ */
+
+@font-face {
+    src: url(ProximaNova-Regular.woff);
+    font-family: ProximaNova;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ProximaNova;
+    background-color: rgb(250, 250, 250);
+    margin: 0;
+    width: 100vw;
+    z-index: 12;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.main-section {
+    margin-top: 54px;
+    padding-top: 30px;
+    max-width: 935px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photos-section {
+    margin-top: 10px;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 54px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    justify-content: center;
+}
+
+.followers-row-mobile {
+    display: none;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+h4.about-me {
+    display: block;
+}
+
+.my-bio {
+    text-align: left;
+}
+
+.follow-button {
+    background-color: rgb(0, 142, 250);
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    width: 90px;
+    height: 26px;
+    font-size: 90%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.follow-button:active {
+    opacity: .7;
+}
+
+.follow-button:focus {
+    outline: none;
+}
+
+.followers {
+    display: flex;
+    margin-right: 20px;
+}
+
+.followers .number {
+    margin-right: 4px;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bio-row {
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.bio-row .row {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.grid-photo {
+    width: 95%;
+}
+
+.photos-row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.name {
+    display: block;
+}
+
+.nav-logo {
+    height: 25px;
+}
+
+.email-popup {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 800px;
+    max-width: 80%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbdbdb;
+}
+
+.hidden {
+    display: none;
+}
+
+.close-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+    cursor: pointer;
+    font-size: 120%;
+    color: rgb(145, 145, 145);
+    background-color: Transparent;
+}
+
+.close-button:focus {
+    outline: none;
+}
+
+.dimmer {
+    background-color: rgb(0, 0, 0, .5);
+    position: fixed;
+    /* important to use fixed, not absolute */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* may not be necessary */
+    z-index: 1;
+}
+
+/* media queries */
+
+@media screen and (max-width: 735px) {
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .followers {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .followers-row-desktop {
+        display: none;
+    }
+
+    .bio-row {
+        padding-bottom: 20px;
+        margin-right: 5px;
+    }
+
+    .followers-row-mobile {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .followers-row-mobile h4 {
+        margin-bottom: 1px;
+        margin-top: 1px;
+    }
+
+    .followers-row-mobile .text {
+        color: rgb(142, 142, 142);
+    }
+
+    .grid-photo {
+        width: 100%;
+    }
+
+    .photos-row {
+        margin-bottom: 0;
+        margin-top: -5px;
+    }
+
+    .photos-row .col-xs-4 {
+        padding: 1px;
+        margin-bottom: 0;
+    }
+
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
